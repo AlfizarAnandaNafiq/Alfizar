@@ -29,6 +29,7 @@ import {
 } from './data/menuData';
 import { ResilientImage } from './components/ResilientImage';
 import { OrderDrawer } from './components/OrderDrawer';
+import { ChatBotWidget } from './components/ChatBotWidget';
 
 const CATEGORY_TABS: { id: MenuCategory; label: string }[] = [
   { id: 'all', label: 'Semua Menu' },
@@ -762,7 +763,7 @@ export default function App() {
         <div
           role="status"
           aria-live="polite"
-          className="fixed bottom-6 right-6 z-40 rounded-full bg-primary text-on-primary border border-mango-yellow px-5 py-3 shadow-lg flex items-center gap-3 max-w-[calc(100vw-3rem)]"
+          className="fixed bottom-24 right-5 z-40 rounded-full bg-primary text-on-primary border border-mango-yellow px-5 py-3 shadow-lg flex items-center gap-3 max-w-[calc(100vw-2.5rem)]"
         >
           <CheckCircle2
             className="w-4 h-4 text-mango-yellow shrink-0"
@@ -780,6 +781,9 @@ export default function App() {
           </button>
         </div>
       )}
+
+      {/* n8n Webhook Chatbot Widget */}
+      <ChatBotWidget orderItems={orderItems} />
 
       {/* Interactive WhatsApp Order Drawer */}
       <OrderDrawer
