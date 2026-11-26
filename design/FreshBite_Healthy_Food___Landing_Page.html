@@ -1,0 +1,660 @@
+<!DOCTYPE html><html lang="id" class="scroll-smooth"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FreshBite Healthy Food — Fresh Every Day, Healthy Every Bite!</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script id="tailwind-config" data-stitch-original-src="5e3cf25bff4fad20===../../tailwind.config.js">/** @type {import('tailwindcss').Config} */
+globalThis.tailwind = globalThis.tailwind || {};
+globalThis.tailwind.config = {
+  darkMode: 'class',
+  theme: {
+    extend: {
+      colors: {
+        'primary': '#233D29',
+        'on-primary': '#FAF6F0',
+        'primary-container': '#CBEACE',
+        'on-primary-container': '#06200F',
+        'papaya-orange': '#E85D35',
+        'on-papaya-orange': '#1C1C18',
+        'papaya-deep': '#C4411B',
+        'on-papaya-deep': '#FFFFFF',
+        'mango-yellow': '#F4B942',
+        'on-mango-yellow': '#233D29',
+        'mango-soft': '#FFEED8',
+        'on-mango-soft': '#271900',
+        'surface': '#FAF6F0',
+        'on-surface': '#233D29',
+        'on-surface-muted': '#49654E',
+        'surface-container-low': '#F4F0EA',
+        'surface-container': '#E6E2DC',
+        'surface-container-high': '#DFE4DB',
+        'outline': '#737972',
+        'outline-variant': '#C9C6C0',
+        'success': '#324D38',
+        'on-success': '#FFFFFF',
+        'error': '#BA1A1A',
+        'on-error': '#FFFFFF',
+      },
+      borderRadius: {
+        'sm': '8px',
+        'DEFAULT': '16px',
+        'md': '20px',
+        'lg': '24px',
+        'xl': '32px',
+        'full': '9999px',
+      },
+      spacing: {
+        'gutter-xs': '4px',
+        'gutter-sm': '8px',
+        'gutter-md': '16px',
+        'gutter-lg': '24px',
+        'gutter-xl': '32px',
+        'section': '64px',
+        'page-margin': '24px',
+      },
+      fontFamily: {
+        'display': ['"Fraunces"', 'sans-serif'],
+        'headline': ['"Fraunces"', 'sans-serif'],
+        'title': ['"Plus Jakarta Sans"', 'sans-serif'],
+        'body': ['"Plus Jakarta Sans"', 'sans-serif'],
+        'label': ['"Plus Jakarta Sans"', 'sans-serif'],
+      },
+      fontSize: {
+        'display-xl': ['64px', { lineHeight: '68px', letterSpacing: '-1.5px', fontWeight: '700' }],
+        'display-xl-mobile': ['32px', { lineHeight: '38px', letterSpacing: '-0.5px', fontWeight: '700' }],
+        'display-lg': ['48px', { lineHeight: '54px', letterSpacing: '-1.0px', fontWeight: '700' }],
+        'display-lg-mobile': ['30px', { lineHeight: '36px', letterSpacing: '-0.5px', fontWeight: '700' }],
+        'headline-lg': ['36px', { lineHeight: '42px', letterSpacing: '-0.5px', fontWeight: '600' }],
+        'headline-lg-mobile': ['26px', { lineHeight: '32px', letterSpacing: '-0.25px', fontWeight: '600' }],
+        'headline-md': ['24px', { lineHeight: '30px', letterSpacing: '-0.25px', fontWeight: '600' }],
+        'title-lg': ['20px', { lineHeight: '28px', letterSpacing: '-0.2px', fontWeight: '700' }],
+        'title-md': ['16px', { lineHeight: '24px', letterSpacing: '0px', fontWeight: '700' }],
+        'body-lg': ['18px', { lineHeight: '28px', letterSpacing: '0px', fontWeight: '400' }],
+        'body-md': ['15px', { lineHeight: '24px', letterSpacing: '0px', fontWeight: '400' }],
+        'label-lg': ['14px', { lineHeight: '20px', letterSpacing: '0.1px', fontWeight: '700' }],
+        'label-sm': ['12px', { lineHeight: '16px', letterSpacing: '0.6px', fontWeight: '700' }],
+      },
+      transitionDuration: {
+        'state-change': '150ms',
+        'surface-enter': '250ms',
+      },
+      transitionDelay: {
+        'state-change': '0ms',
+        'surface-enter': '0ms',
+      },
+      transitionTimingFunction: {
+        'state-change': 'ease-out',
+        'surface-enter': 'cubic-bezier(0.2, 0, 0, 1)',
+      },
+    },
+  },
+};
+if (typeof module !== 'undefined') module.exports = globalThis.tailwind.config;
+</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,700;1,9..144,600&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet">
+  <style>
+    .material-symbols-outlined {
+      display: inline-block;
+      width: 1em;
+      height: 1em;
+      line-height: 1 !important;
+      box-sizing: content-box;
+      overflow: hidden;
+      white-space: nowrap;
+      direction: ltr;
+      vertical-align: middle;
+    }
+    .paper-grain {
+      background-image: radial-gradient(rgba(35, 61, 41, 0.035) 1px, transparent 0);
+      background-size: 22px 22px;
+    }
+  </style>
+</head>
+<body class="bg-surface text-on-surface font-body antialiased selection:bg-mango-yellow selection:text-on-mango-yellow">
+  <div class="min-h-screen flex flex-col paper-grain">
+
+    <!-- 1. Sticky Top Navigation -->
+    <header class="sticky top-0 z-40 bg-surface border-b border-outline-variant">
+      <div class="max-w-7xl mx-auto px-page-margin py-4 flex items-center justify-between gap-gutter-md">
+        <a href="#" class="font-display text-headline-md text-on-surface tracking-tight">
+          FreshBite<span class="text-papaya-orange">.</span>
+        </a>
+
+        <nav aria-label="Navigasi utama" class="hidden md:flex items-center gap-gutter-xl">
+          <a href="#menu" class="font-label text-label-lg text-on-surface-muted hover:text-on-surface transition-colors duration-state-change ease-state-change">Menu</a>
+          <a href="#kenapa" class="font-label text-label-lg text-on-surface-muted hover:text-on-surface transition-colors duration-state-change ease-state-change">Kenapa FreshBite</a>
+          <a href="#paket-hemat" class="font-label text-label-lg text-on-surface-muted hover:text-on-surface transition-colors duration-state-change ease-state-change">Paket Hemat</a>
+          <a href="#racik" class="font-label text-label-lg text-on-surface-muted hover:text-on-surface transition-colors duration-state-change ease-state-change">Cara Pesan</a>
+        </nav>
+
+        <div class="flex items-center gap-gutter-sm">
+          <!-- COMPONENT: button-nav-cta -->
+          <a href="#pesan-whatsapp" data-component-id="button-nav-cta" data-component-type="button" data-component-variant="primary" class="inline-flex items-center justify-center gap-2 rounded-full bg-papaya-orange text-on-papaya-orange px-5 py-2.5 font-label text-label-lg whitespace-nowrap transition-colors duration-state-change ease-state-change hover:bg-papaya-deep hover:text-on-papaya-deep focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary">
+            <span class="material-symbols-outlined text-title-md" aria-hidden="true">chat</span>
+            <span data-design-text-token="label-lg">Pesan via WhatsApp</span>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main class="flex-1">
+
+      <!-- 2. Hero Section (Asymmetrical Split Layout) -->
+      <section class="max-w-7xl mx-auto px-page-margin pt-10 pb-section md:pt-16 md:pb-20">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter-xl lg:gap-12 items-center">
+
+          <!-- Left Column (7 cols) -->
+          <div class="lg:col-span-7 flex flex-col items-start gap-gutter-lg">
+            <!-- COMPONENT: badge-hero -->
+            <span data-component-id="badge-hero" data-component-type="badge" data-component-variant="status" role="status" class="inline-flex items-center gap-2 rounded-full bg-mango-soft text-on-mango-soft border border-outline-variant px-4 py-1.5 font-label text-label-sm uppercase tracking-wider">
+              <span class="w-2 h-2 rounded-full bg-papaya-orange shrink-0" aria-hidden="true"></span>
+              <span data-design-text-token="label-sm">100% BUAH SEGAR HARIAN • TANPA PEMANIS BUATAN</span>
+            </span>
+
+            <h1 class="font-display text-display-xl-mobile md:text-display-xl text-on-surface text-balance">
+              Fresh Every Day, Healthy Every Bite!
+            </h1>
+
+            <p class="font-body text-body-lg text-on-surface-muted max-w-prose text-pretty">
+              Solusi ngemil sehat, praktis, dan ramah di kantong pelajar hingga pekerja sibuk. Dibuat fresh setiap pagi dengan buah pilihan.
+            </p>
+
+            <div class="flex flex-wrap items-center gap-gutter-md pt-2">
+              <!-- COMPONENT: button-primary -->
+              <a href="#menu" data-component-id="button-primary" data-component-type="button" data-component-variant="primary" class="inline-flex items-center justify-center gap-2 rounded-full bg-papaya-orange text-on-papaya-orange px-7 py-3.5 font-label text-label-lg transition-colors duration-state-change ease-state-change hover:bg-papaya-deep hover:text-on-papaya-deep focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary">
+                <span data-design-text-token="label-lg">Lihat Menu &amp; Harga</span>
+                <span class="material-symbols-outlined text-title-md" aria-hidden="true">arrow_forward</span>
+              </a>
+
+              <!-- COMPONENT: button-secondary -->
+              <a href="#racik" data-component-id="button-secondary" data-component-type="button" data-component-variant="secondary" class="inline-flex items-center justify-center gap-2 rounded-full border border-primary bg-transparent text-primary px-7 py-3.5 font-label text-label-lg transition-colors duration-state-change ease-state-change hover:bg-primary hover:text-on-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary">
+                <span data-design-text-token="label-lg">Custom Salad Sendiri</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Right Column (5 cols): Arch-framed hero image + floating pill stickers -->
+          <div class="lg:col-span-5 relative flex justify-center lg:justify-end">
+            <div class="relative w-full max-w-md">
+              <div class="overflow-hidden rounded-t-full rounded-b-xl border border-outline-variant bg-surface-container-low p-2.5">
+                <img src="https://lh3.googleusercontent.com/aida/ALJJyrCGsXjQO6nw49Djsgo7Tpxcf8VrF3YZ9Q7Eci7A9m-zQTq70tWsYdneS-sclcITQsBcao90U90jr4npjkhmnyEjs7zAGqIfUOwie9aRUGLWTvYv28l4gdkRfNrsYg2DUiPbJijy9j6gx1jWiIvjiy32UiVXIBVvjWQRw7YcZxNWp3Kd2qi7bCOXnR5qEgLMOYYE0dVbOL7JsFEQqbxV2XGF9aou4ddywLmteTZ_PWxCeU5GtRm4s2RVgNc" alt="Cup salad buah segar berlapis dengan saus yogurt creamy dari FreshBite" class="w-full aspect-[3/4] object-cover rounded-t-full rounded-b-lg" data-stitch-original-src="f5db2501ed001da9===../../images/hero_fruit_salad.jpg">
+              </div>
+
+              <!-- Floating Sticker 1: Mulai Rp8.000 -->
+              <div class="absolute top-12 -left-4 md:-left-8 rounded-full bg-mango-yellow text-on-mango-yellow px-5 py-2.5 shadow-md border border-outline-variant">
+                <span class="font-title text-title-md tabular-nums block" data-design-text-token="title-md">Mulai Rp8.000</span>
+              </div>
+
+              <!-- Floating Sticker 2: Higienis & Praktis -->
+              <div class="absolute bottom-8 -right-3 md:-right-6 rounded-full bg-primary text-on-primary px-5 py-2.5 shadow-md flex items-center gap-2">
+                <span class="material-symbols-outlined text-title-md text-mango-yellow" aria-hidden="true">verified</span>
+                <span class="font-label text-label-lg" data-design-text-token="label-lg">Higienis &amp; Praktis</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- 3. Interactive Menu Showcase (Bento Card Grid with Category Tabs) -->
+      <section id="menu" class="max-w-7xl mx-auto px-page-margin py-section border-t border-outline-variant">
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-gutter-lg mb-10">
+          <div class="flex flex-col gap-gutter-sm">
+            <h2 class="font-display text-display-lg-mobile md:text-display-lg text-on-surface">
+              Menu Segar Hari Ini
+            </h2>
+            <p class="font-body text-body-md text-on-surface-muted max-w-prose">
+              Dipetik dan diracik setiap pagi. Pilih ukuran pas untuk camilan, makan siang, atau stok sehat di kulkasmu.
+            </p>
+          </div>
+
+          <!-- COMPONENT: tabs-horizontal -->
+          <div data-component-id="tabs-horizontal" data-component-type="tabs" data-component-variant="horizontal">
+            <div role="tablist" aria-label="Kategori Menu FreshBite" class="inline-flex flex-wrap items-center gap-1.5 rounded-full bg-surface-container-low border border-outline-variant p-1.5">
+              <button type="button" role="tab" id="tab-semua" data-filter="all" aria-selected="true" tabindex="0" class="menu-tab rounded-full bg-primary text-on-primary px-5 py-2 font-label text-label-lg transition-colors duration-state-change ease-state-change">
+                <span data-design-text-token="label-lg">Semua Menu</span>
+              </button>
+              <button type="button" role="tab" id="tab-salad" data-filter="salad" aria-selected="false" tabindex="-1" class="menu-tab rounded-full bg-transparent text-on-surface-muted px-5 py-2 font-label text-label-lg transition-colors duration-state-change ease-state-change hover:text-on-surface">
+                <span data-design-text-token="label-lg">Salad Buah</span>
+              </button>
+              <button type="button" role="tab" id="tab-minuman" data-filter="minuman" aria-selected="false" tabindex="-1" class="menu-tab rounded-full bg-transparent text-on-surface-muted px-5 py-2 font-label text-label-lg transition-colors duration-state-change ease-state-change hover:text-on-surface">
+                <span data-design-text-token="label-lg">Jus &amp; Yogurt</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Asymmetrical Bento Menu Grid (12 columns) -->
+        <div id="menu-grid" class="grid grid-cols-1 md:grid-cols-12 gap-gutter-lg items-stretch">
+
+          <!-- 2. Salad Buah Regular (Featured 7 cols) -->
+          <article data-category="salad" data-component-id="card-action-featured" data-component-type="card" data-component-variant="action" class="menu-card md:col-span-7 rounded-xl bg-mango-soft border border-outline-variant p-6 flex flex-col md:flex-row gap-gutter-lg items-stretch transition-transform duration-state-change ease-state-change hover:-translate-y-1">
+            <div class="md:w-1/2 overflow-hidden rounded-lg bg-surface-container">
+              <img src="https://lh3.googleusercontent.com/aida/ALJJyrBpFsgPUzvoUbec3x9r3bFjC39vRqz_METs9mS6ka875KW8LK60Os9cCVbjnPyISpRe9_P3jxAcDKM-EwKwyswMR7ZjwIZEfryBblX8ykwnfLe1z1NtaZC2gUSfYmm7XDHRDmBK8weUZqIdiUNY7A0hox85ZyXK94-jaln56Zz2i8nHN4hfZ7hvYG-pwA1UT9MWASt-VHGZZP6MYzEpSBlX-UJCMC50RaIm6K9HKSD2J7xLYSiMnz_IZucd" alt="Salad Buah Regular FreshBite" class="w-full h-full min-h-56 object-cover" data-stitch-original-src="d1bd5c9b13ffe2a3===../../images/menu_salad_regular.jpg">
+            </div>
+            <div class="md:w-1/2 flex flex-col justify-between gap-gutter-md">
+              <div class="flex flex-col items-start gap-gutter-sm">
+                <span data-component-id="badge-status" data-component-type="badge" data-component-variant="status" role="status" class="inline-flex items-center rounded-full bg-mango-yellow text-on-mango-yellow px-3.5 py-1 font-label text-label-sm uppercase tracking-wider">
+                  <span data-design-text-token="label-sm">Best Seller</span>
+                </span>
+                <h3 class="font-headline text-headline-md text-on-surface" data-design-text-token="headline-md">Salad Buah Regular</h3>
+                <p class="font-body text-body-md text-on-surface-muted" data-design-text-token="body-md">
+                  Best Seller • Kombinasi melon, semangka, apel, anggur, mangga, stroberi.
+                </p>
+              </div>
+              <footer class="flex items-center justify-between gap-3 pt-2 border-t border-outline-variant">
+                <span class="font-title text-title-lg text-on-surface tabular-nums" data-design-text-token="title-lg">Rp15.000</span>
+                <button type="button" onclick="addToOrder(&#39;Salad Buah Regular&#39;, 15000)" data-component-id="button-with-icon-featured" data-component-type="button" data-component-variant="with-icon" class="inline-flex items-center justify-center gap-1.5 rounded-full bg-papaya-orange text-on-papaya-orange px-5 py-2.5 font-label text-label-lg transition-colors duration-state-change ease-state-change hover:bg-papaya-deep hover:text-on-papaya-deep">
+                  <span class="material-symbols-outlined text-label-lg" aria-hidden="true">add</span>
+                  <span data-design-text-token="label-lg">Pesan</span>
+                </button>
+              </footer>
+            </div>
+          </article>
+
+          <!-- 1. Salad Buah Mini (5 cols) -->
+          <article data-category="salad" data-component-id="card-action" data-component-type="card" data-component-variant="action" class="menu-card md:col-span-5 rounded-xl bg-surface-container-low border border-outline-variant p-6 flex flex-col justify-between gap-gutter-md transition-transform duration-state-change ease-state-change hover:-translate-y-1">
+            <div class="overflow-hidden rounded-lg aspect-[4/3] bg-surface-container">
+              <img src="https://lh3.googleusercontent.com/aida/ALJJyrCFOtPHXnu8_z-52PtT0t6Yx1dtrmvdTSptmycUVT1k9PjjvfLmPpX59tKh1ENwiaFSRX4eEKb7vo8MRuonyFuQrVbdGP4G5NABSXzRpuqV5L17_2Id0ixUDuKeC47k0iwIIitRskArU6tUD9Pw_yZ585z_-Eqen8C7LaLukm_OwQVHBZwtCXnL-7rTbVZK7Ehmb9-MoBJzlqWjJCPq8yyj3s6ZibS_GFYkjDfmw4YFmT88X8dmey1ZsQ" alt="Salad Buah Mini FreshBite" class="w-full h-full object-cover" data-stitch-original-src="368d3a0065e1500e===../../images/menu_salad_mini.jpg">
+            </div>
+            <div class="flex flex-col gap-1.5">
+              <h3 class="font-headline text-headline-md text-on-surface" data-design-text-token="headline-md">Salad Buah Mini</h3>
+              <p class="font-body text-body-md text-on-surface-muted" data-design-text-token="body-md">
+                Porsi pas untuk camilan cepat di kampus atau kantor.
+              </p>
+            </div>
+            <footer class="flex items-center justify-between gap-3 pt-2 border-t border-outline-variant">
+              <span class="font-title text-title-lg text-on-surface tabular-nums" data-design-text-token="title-lg">Rp10.000</span>
+              <button type="button" onclick="addToOrder(&#39;Salad Buah Mini&#39;, 10000)" data-component-id="button-with-icon" data-component-type="button" data-component-variant="with-icon" class="inline-flex items-center justify-center gap-1.5 rounded-full bg-primary text-on-primary px-5 py-2.5 font-label text-label-lg transition-colors duration-state-change ease-state-change hover:bg-papaya-orange hover:text-on-papaya-orange">
+                <span class="material-symbols-outlined text-label-lg" aria-hidden="true">add</span>
+                <span data-design-text-token="label-lg">Pesan</span>
+              </button>
+            </footer>
+          </article>
+
+          <!-- 3. Salad Buah Jumbo (5 cols) -->
+          <article data-category="salad" data-component-id="card-action" data-component-type="card" data-component-variant="action" class="menu-card md:col-span-5 rounded-xl bg-surface-container-low border border-outline-variant p-6 flex flex-col justify-between gap-gutter-md transition-transform duration-state-change ease-state-change hover:-translate-y-1">
+            <div class="overflow-hidden rounded-lg aspect-[4/3] bg-surface-container">
+              <img src="https://lh3.googleusercontent.com/aida/ALJJyrDXWdlWakGzzA7uxXDJiLIwZAReYeEUPHGiL53tNC7QDwBEjKkL-3v-K2x6CGAy75p895eXy2vbLUVu2Son01UpKVM5o3dlKspG_H_qibwcW03aLCFKsRc6o8-1gIMcR7kkrQHIqQX8gzAaohqU8MyP4KTF5xHzC6y7HmRhgy2oXf45VC_J0balSnIjYyJuCS9Mt0c4voIqhTdZVSAgHUoR-t_Vh9weO7wRD9zK2wlMZ9_laKeZEvw15hQ" alt="Salad Buah Jumbo FreshBite" class="w-full h-full object-cover" data-stitch-original-src="d292a6e1be7fec01===../../images/menu_salad_jumbo.jpg">
+            </div>
+            <div class="flex flex-col gap-1.5">
+              <h3 class="font-headline text-headline-md text-on-surface" data-design-text-token="headline-md">Salad Buah Jumbo</h3>
+              <p class="font-body text-body-md text-on-surface-muted" data-design-text-token="body-md">
+                Porsi puas untuk sharing atau pengganti makan siang.
+              </p>
+            </div>
+            <footer class="flex items-center justify-between gap-3 pt-2 border-t border-outline-variant">
+              <span class="font-title text-title-lg text-on-surface tabular-nums" data-design-text-token="title-lg">Rp25.000</span>
+              <button type="button" onclick="addToOrder(&#39;Salad Buah Jumbo&#39;, 25000)" data-component-id="button-with-icon" data-component-type="button" data-component-variant="with-icon" class="inline-flex items-center justify-center gap-1.5 rounded-full bg-primary text-on-primary px-5 py-2.5 font-label text-label-lg transition-colors duration-state-change ease-state-change hover:bg-papaya-orange hover:text-on-papaya-orange">
+                <span class="material-symbols-outlined text-label-lg" aria-hidden="true">add</span>
+                <span data-design-text-token="label-lg">Pesan</span>
+              </button>
+            </footer>
+          </article>
+
+          <!-- 6. Fruit Bowl Granola (Featured 7 cols) -->
+          <article data-category="salad" data-component-id="card-action" data-component-type="card" data-component-variant="action" class="menu-card md:col-span-7 rounded-xl bg-surface-container-low border border-outline-variant p-6 flex flex-col md:flex-row gap-gutter-lg items-stretch transition-transform duration-state-change ease-state-change hover:-translate-y-1">
+            <div class="md:w-1/2 overflow-hidden rounded-lg bg-surface-container">
+              <img src="https://lh3.googleusercontent.com/aida/ALJJyrDjcrerJcCoLTrMySKddkD6sKbDs-QVBgWPeg2Hv95fKpJTignVBUyCz4UGNZTDlMqn4bcbi4uj1-ipyntoxd4Myo-P4MzMvv5uAtTee9DSLM_kYlWsMUlrMsBeiFy31zxHHlEnw0g0rksPKTdwYqDsV1wQ3sJQeMk3vCLW8CHIArbXedMnKwsuqJnwW3wv4wAzG-gabJlTV0dh6VnLlNQ8-TtJVVdeBQw3C-7kpoP_UGiodP8YlgdV07kfjg" alt="Fruit Bowl Granola FreshBite" class="w-full h-full min-h-56 object-cover" data-stitch-original-src="c93db33728966269===../../images/menu_fruit_granola.jpg">
+            </div>
+            <div class="md:w-1/2 flex flex-col justify-between gap-gutter-md">
+              <div class="flex flex-col items-start gap-gutter-sm">
+                <span class="inline-flex items-center rounded-full bg-primary-container text-on-primary-container px-3.5 py-1 font-label text-label-sm uppercase tracking-wider">
+                  <span data-design-text-token="label-sm">Favorit Sarapan</span>
+                </span>
+                <h3 class="font-headline text-headline-md text-on-surface" data-design-text-token="headline-md">Fruit Bowl Granola</h3>
+                <p class="font-body text-body-md text-on-surface-muted" data-design-text-token="body-md">
+                  Dengan topping granola renyah dan madu murni.
+                </p>
+              </div>
+              <footer class="flex items-center justify-between gap-3 pt-2 border-t border-outline-variant">
+                <span class="font-title text-title-lg text-on-surface tabular-nums" data-design-text-token="title-lg">Rp18.000</span>
+                <button type="button" onclick="addToOrder(&#39;Fruit Bowl Granola&#39;, 18000)" data-component-id="button-with-icon" data-component-type="button" data-component-variant="with-icon" class="inline-flex items-center justify-center gap-1.5 rounded-full bg-primary text-on-primary px-5 py-2.5 font-label text-label-lg transition-colors duration-state-change ease-state-change hover:bg-papaya-orange hover:text-on-papaya-orange">
+                  <span class="material-symbols-outlined text-label-lg" aria-hidden="true">add</span>
+                  <span data-design-text-token="label-lg">Pesan</span>
+                </button>
+              </footer>
+            </div>
+          </article>
+
+          <!-- 4. Jus Buah Segar (6 cols) -->
+          <article data-category="minuman" data-component-id="card-action" data-component-type="card" data-component-variant="action" class="menu-card md:col-span-6 rounded-xl bg-surface-container-low border border-outline-variant p-6 flex flex-col md:flex-row gap-gutter-lg items-stretch transition-transform duration-state-change ease-state-change hover:-translate-y-1">
+            <div class="md:w-2/5 overflow-hidden rounded-lg bg-surface-container">
+              <img src="https://lh3.googleusercontent.com/aida/ALJJyrBpfenLAXvSsn4AvOZbdfSuFzH8Z5gkGVjul1eXb2LVyRurHuR7fdsN4QA7CgEKyYOykJpCXxw_Afifs676W2Wn2rOptlCGkm1JKpZvm_Y1p75c64gzJ887fRdwiDAKgkORu0HOrMLfJH3B62wEGNpOmgTXCOHFcBBjhv66_c2bRGQa4D0eebML-CBl5D9aEJsyFWo2S_bGLAWzTN1FUL8oO3GCv1q0Wsna3_5Lytx45iolmd7HjA" alt="Jus Buah Segar FreshBite" class="w-full h-full min-h-48 object-cover" data-stitch-original-src="78ce5de93ef1c9b9===../../images/menu_jus_buah.jpg">
+            </div>
+            <div class="md:w-3/5 flex flex-col justify-between gap-gutter-md">
+              <div class="flex flex-col gap-1.5">
+                <h3 class="font-headline text-headline-md text-on-surface" data-design-text-token="headline-md">Jus Buah Segar</h3>
+                <p class="font-body text-body-md text-on-surface-muted" data-design-text-token="body-md">
+                  100% sari buah murni tanpa pemanis buatan.
+                </p>
+              </div>
+              <footer class="flex items-center justify-between gap-3 pt-2 border-t border-outline-variant">
+                <span class="font-title text-title-lg text-on-surface tabular-nums" data-design-text-token="title-lg">Rp8.000</span>
+                <button type="button" onclick="addToOrder(&#39;Jus Buah Segar&#39;, 8000)" data-component-id="button-with-icon" data-component-type="button" data-component-variant="with-icon" class="inline-flex items-center justify-center gap-1.5 rounded-full bg-primary text-on-primary px-5 py-2.5 font-label text-label-lg transition-colors duration-state-change ease-state-change hover:bg-papaya-orange hover:text-on-papaya-orange">
+                  <span class="material-symbols-outlined text-label-lg" aria-hidden="true">add</span>
+                  <span data-design-text-token="label-lg">Pesan</span>
+                </button>
+              </footer>
+            </div>
+          </article>
+
+          <!-- 5. Yogurt Buah (6 cols) -->
+          <article data-category="minuman" data-component-id="card-action" data-component-type="card" data-component-variant="action" class="menu-card md:col-span-6 rounded-xl bg-surface-container-low border border-outline-variant p-6 flex flex-col md:flex-row gap-gutter-lg items-stretch transition-transform duration-state-change ease-state-change hover:-translate-y-1">
+            <div class="md:w-2/5 overflow-hidden rounded-lg bg-surface-container">
+              <img src="https://lh3.googleusercontent.com/aida/ALJJyrA6BBqAs7e6UJoB8DLWMfyzcOq6I6xAYgNtwwh7hxhwe3z08bfA3Oe85_8sKiOTinkIH5bFX_WltIAkj3yhsPo5O5CFmCORFWopmOgp7zzhOpwwnDSVovk6yD5GfYYx-RRAyxu2wEbr7I6goNcHNEIjcMg2Z4_RLyyjscpFlQgmFz3E2SLlk_uwpebvumefNRbNUvSV8lt4wySxOaZ9xSq7qoTThMTbSZJTbA2s7PEInIh_2YX1XDI3zUc" alt="Yogurt Buah FreshBite" class="w-full h-full min-h-48 object-cover" data-stitch-original-src="8f0ea0f91ed9652a===../../images/menu_yogurt_buah.jpg">
+            </div>
+            <div class="md:w-3/5 flex flex-col justify-between gap-gutter-md">
+              <div class="flex flex-col gap-1.5">
+                <h3 class="font-headline text-headline-md text-on-surface" data-design-text-token="headline-md">Yogurt Buah</h3>
+                <p class="font-body text-body-md text-on-surface-muted" data-design-text-token="body-md">
+                  Potongan buah segar dengan creamy yogurt rendah lemak.
+                </p>
+              </div>
+              <footer class="flex items-center justify-between gap-3 pt-2 border-t border-outline-variant">
+                <span class="font-title text-title-lg text-on-surface tabular-nums" data-design-text-token="title-lg">Rp12.000</span>
+                <button type="button" onclick="addToOrder(&#39;Yogurt Buah&#39;, 12000)" data-component-id="button-with-icon" data-component-type="button" data-component-variant="with-icon" class="inline-flex items-center justify-center gap-1.5 rounded-full bg-primary text-on-primary px-5 py-2.5 font-label text-label-lg transition-colors duration-state-change ease-state-change hover:bg-papaya-orange hover:text-on-papaya-orange">
+                  <span class="material-symbols-outlined text-label-lg" aria-hidden="true">add</span>
+                  <span data-design-text-token="label-lg">Pesan</span>
+                </button>
+              </footer>
+            </div>
+          </article>
+
+        </div>
+      </section>
+
+      <!-- 4. "Build Your Own" Customization Highlight (Editorial Horizontal Strip) -->
+      <section id="racik" class="bg-surface-container-low border-y border-outline-variant py-section">
+        <div class="max-w-7xl mx-auto px-page-margin">
+          <div class="flex flex-col md:flex-row md:items-end justify-between gap-gutter-md mb-10">
+            <div class="flex flex-col gap-gutter-xs">
+              <span class="font-label text-label-sm uppercase tracking-wider text-on-surface-muted">Custom Order • Cara Pesan</span>
+              <h2 class="font-display text-display-lg-mobile md:text-display-lg text-on-surface">
+                Racik Sesuai Seleramu
+              </h2>
+            </div>
+            <p class="font-body text-body-md text-on-surface-muted max-w-md">
+              Pilih ukuran cup, saus favorit, dan ekstra topping dalam 3 langkah mudah sebelum kirim pesanan ke WhatsApp kami.
+            </p>
+          </div>
+
+          <!-- Horizontal 3-Step Flow -->
+          <div class="grid grid-cols-1 lg:grid-cols-3 gap-gutter-lg items-stretch">
+
+            <!-- Step 1: Pilih Ukuran Cup -->
+            <div class="rounded-xl bg-surface border border-outline-variant p-6 flex flex-col justify-between gap-gutter-md">
+              <div class="flex items-center justify-between">
+                <span class="inline-flex items-center justify-center rounded-full bg-mango-yellow text-on-mango-yellow px-3.5 py-1 font-label text-label-sm">Langkah 1</span>
+                <span class="material-symbols-outlined text-headline-md text-on-surface-muted" aria-hidden="true">restaurant</span>
+              </div>
+              <div class="flex flex-col gap-1">
+                <h3 class="font-headline text-headline-md text-on-surface">Pilih Ukuran Cup</h3>
+                <p class="font-body text-body-md text-on-surface-muted">Sesuaikan porsi ngemil atau makan siangmu.</p>
+              </div>
+              <div class="flex flex-wrap gap-2 pt-2">
+                <button type="button" data-step="size" data-value="Mini (Rp10.000)" class="custom-opt rounded-full border border-primary bg-primary text-on-primary px-4 py-2 font-label text-label-lg transition-colors duration-state-change">Mini</button>
+                <button type="button" data-step="size" data-value="Regular (Rp15.000)" class="custom-opt rounded-full border border-outline-variant bg-surface-container-low text-on-surface px-4 py-2 font-label text-label-lg transition-colors duration-state-change hover:border-primary">Regular</button>
+                <button type="button" data-step="size" data-value="Jumbo (Rp25.000)" class="custom-opt rounded-full border border-outline-variant bg-surface-container-low text-on-surface px-4 py-2 font-label text-label-lg transition-colors duration-state-change hover:border-primary">Jumbo</button>
+              </div>
+            </div>
+
+            <!-- Step 2: Pilih Saus -->
+            <div class="rounded-xl bg-surface border border-outline-variant p-6 flex flex-col justify-between gap-gutter-md">
+              <div class="flex items-center justify-between">
+                <span class="inline-flex items-center justify-center rounded-full bg-mango-yellow text-on-mango-yellow px-3.5 py-1 font-label text-label-sm">Langkah 2</span>
+                <span class="material-symbols-outlined text-headline-md text-on-surface-muted" aria-hidden="true">water_drop</span>
+              </div>
+              <div class="flex flex-col gap-1">
+                <h3 class="font-headline text-headline-md text-on-surface">Pilih Saus</h3>
+                <p class="font-body text-body-md text-on-surface-muted">Dibuat segar tanpa pemanis buatan.</p>
+              </div>
+              <div class="flex flex-wrap gap-2 pt-2">
+                <button type="button" data-step="sauce" data-value="Creamy Yogurt" class="custom-opt rounded-full border border-primary bg-primary text-on-primary px-4 py-2 font-label text-label-lg transition-colors duration-state-change">Creamy Yogurt</button>
+                <button type="button" data-step="sauce" data-value="Classic Mayo" class="custom-opt rounded-full border border-outline-variant bg-surface-container-low text-on-surface px-4 py-2 font-label text-label-lg transition-colors duration-state-change hover:border-primary">Classic Mayo</button>
+              </div>
+            </div>
+
+            <!-- Step 3: Tambah Topping -->
+            <div class="rounded-xl bg-surface border border-outline-variant p-6 flex flex-col justify-between gap-gutter-md">
+              <div class="flex items-center justify-between">
+                <span class="inline-flex items-center justify-center rounded-full bg-mango-yellow text-on-mango-yellow px-3.5 py-1 font-label text-label-sm">Langkah 3</span>
+                <span class="material-symbols-outlined text-headline-md text-on-surface-muted" aria-hidden="true">spa</span>
+              </div>
+              <div class="flex flex-col gap-1">
+                <h3 class="font-headline text-headline-md text-on-surface">Tambah Topping</h3>
+                <p class="font-body text-body-md text-on-surface-muted">Ekstra renyah atau manis alami.</p>
+              </div>
+              <div class="flex flex-wrap gap-2 pt-2">
+                <button type="button" data-step="topping" data-value="Granola" class="custom-opt rounded-full border border-primary bg-primary text-on-primary px-4 py-2 font-label text-label-lg transition-colors duration-state-change">Granola</button>
+                <button type="button" data-step="topping" data-value="Madu" class="custom-opt rounded-full border border-outline-variant bg-surface-container-low text-on-surface px-4 py-2 font-label text-label-lg transition-colors duration-state-change hover:border-primary">Madu</button>
+                <button type="button" data-step="topping" data-value="Keju" class="custom-opt rounded-full border border-outline-variant bg-surface-container-low text-on-surface px-4 py-2 font-label text-label-lg transition-colors duration-state-change hover:border-primary">Keju</button>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Live Custom Summary Strip -->
+          <div class="mt-6 rounded-xl bg-primary text-on-primary p-6 flex flex-col md:flex-row items-start md:items-center justify-between gap-gutter-md">
+            <div class="flex flex-col gap-1">
+              <span class="font-label text-label-sm uppercase tracking-wider text-mango-yellow">Racikan Pilihanmu</span>
+              <p id="custom-summary" class="font-title text-title-lg">Mini (Rp10.000) • Creamy Yogurt • Granola</p>
+            </div>
+            <a id="custom-wa-btn" href="#pesan-whatsapp" class="inline-flex items-center justify-center gap-2 rounded-full bg-papaya-orange text-on-papaya-orange px-6 py-3 font-label text-label-lg transition-colors duration-state-change hover:bg-mango-yellow hover:text-on-mango-yellow">
+              <span class="material-symbols-outlined text-title-md" aria-hidden="true">chat</span>
+              <span>Pesan Racikan Ini</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- 5. Value Proposition & Target Audience Bento Grid -->
+      <section id="kenapa" class="max-w-7xl mx-auto px-page-margin py-section">
+        <div class="flex flex-col gap-gutter-sm mb-10">
+          <h2 class="font-display text-display-lg-mobile md:text-display-lg text-on-surface">
+            Kenapa Memilih FreshBite?
+          </h2>
+          <p class="font-body text-body-md text-on-surface-muted max-w-prose">
+            Dirancang khusus untuk gaya hidup aktif pelajar, mahasiswa, dan pekerja sibuk tanpa mengorbankan rasa maupun budget.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter-lg items-stretch">
+
+          <!-- Bento 1 (7 cols) -->
+          <article data-component-id="card-bento-primary" data-component-type="card" data-component-variant="elevated" class="md:col-span-7 rounded-xl bg-primary text-on-primary p-8 flex flex-col justify-between gap-gutter-lg">
+            <div class="w-12 h-12 rounded-full bg-mango-yellow text-on-mango-yellow flex items-center justify-center">
+              <span class="material-symbols-outlined text-headline-md" aria-hidden="true">eco</span>
+            </div>
+            <div class="flex flex-col gap-2">
+              <h3 class="font-headline text-headline-md" data-design-text-token="headline-md">Dibuat Setiap Pagi</h3>
+              <p class="font-body text-body-md text-primary-container max-w-prose" data-design-text-token="body-md">
+                Kesegaran terjamin. Semua buah dipilih dan dipotong setiap pagi hari sehingga tekstur tetap renyah, manis alami, dan kaya vitamin.
+              </p>
+            </div>
+          </article>
+
+          <!-- Bento 2 (5 cols) -->
+          <article data-component-id="card-bento-mango" data-component-type="card" data-component-variant="elevated" class="md:col-span-5 rounded-xl bg-mango-soft text-on-mango-soft border border-outline-variant p-8 flex flex-col justify-between gap-gutter-lg">
+            <div class="w-12 h-12 rounded-full bg-papaya-orange text-on-papaya-orange flex items-center justify-center">
+              <span class="material-symbols-outlined text-headline-md" aria-hidden="true">savings</span>
+            </div>
+            <div class="flex flex-col gap-2">
+              <h3 class="font-headline text-headline-md text-on-surface" data-design-text-token="headline-md">Ramah di Kantong</h3>
+              <p class="font-body text-body-md text-on-surface-muted" data-design-text-token="body-md">
+                Harga pelajar &amp; mahasiswa mulai 8 ribuan. Ngemil buah segar setiap hari tidak perlu menunggu gajian.
+              </p>
+            </div>
+          </article>
+
+          <!-- Bento 3 (5 cols) -->
+          <article data-component-id="card-bento-cream" data-component-type="card" data-component-variant="elevated" class="md:col-span-5 rounded-xl bg-surface-container-low border border-outline-variant p-8 flex flex-col justify-between gap-gutter-lg">
+            <div class="w-12 h-12 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center">
+              <span class="material-symbols-outlined text-headline-md" aria-hidden="true">inventory_2</span>
+            </div>
+            <div class="flex flex-col gap-2">
+              <h3 class="font-headline text-headline-md text-on-surface" data-design-text-token="headline-md">Kemasan Estetik &amp; Higienis</h3>
+              <p class="font-body text-body-md text-on-surface-muted" data-design-text-token="body-md">
+                Cup food-grade anti tumpah lengkap dengan sendok. Mudah dibawa ke sekolah, kampus, atau kantor.
+              </p>
+            </div>
+          </article>
+
+          <!-- Bento 4 (7 cols): Paket Hemat -->
+          <article id="paket-hemat" data-component-id="card-bento-promo" data-component-type="card" data-component-variant="interactive" class="md:col-span-7 rounded-xl bg-surface-container border border-outline-variant p-8 flex flex-col justify-between gap-gutter-lg">
+            <div class="flex items-center justify-between gap-4">
+              <div class="w-12 h-12 rounded-full bg-primary text-on-primary flex items-center justify-center">
+                <span class="material-symbols-outlined text-headline-md" aria-hidden="true">celebration</span>
+              </div>
+              <span class="rounded-full bg-papaya-orange text-on-papaya-orange px-4 py-1.5 font-label text-label-sm uppercase tracking-wider">Diskon Grup</span>
+            </div>
+            <div class="flex flex-col gap-2">
+              <h3 class="font-headline text-headline-md text-on-surface" data-design-text-token="headline-md">Promo Paket Hemat</h3>
+              <p class="font-body text-body-md text-on-surface-muted max-w-prose" data-design-text-token="body-md">
+                Diskon khusus pemesanan rame-rame untuk acara kelas, rapat kantor, arisan, atau traktiran bareng teman. Minimal 5 cup sudah dapat harga spesial.
+              </p>
+            </div>
+          </article>
+
+        </div>
+      </section>
+
+    </main>
+
+    <!-- 6. Social Proof & Ordering Footer -->
+    <footer id="pesan-whatsapp" class="bg-primary text-on-primary mt-8 pb-24">
+      <div class="max-w-7xl mx-auto px-page-margin pt-16 flex flex-col gap-12">
+
+        <!-- Bold Closing CTA -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter-xl items-center pb-12 border-b border-on-surface-muted">
+          <div class="lg:col-span-8 flex flex-col gap-gutter-md">
+            <h2 class="font-display text-display-lg-mobile md:text-display-lg text-on-primary text-balance">
+              Siap Hidup Lebih Sehat Hari Ini?
+            </h2>
+            <p class="font-body text-body-lg text-primary-container max-w-prose">
+              Pesan sekarang sebelum stok buah segar pagi ini habis. Pengiriman cepat area kampus, perkantoran, dan perumahan.
+            </p>
+          </div>
+          <div class="lg:col-span-4 flex lg:justify-end">
+            <a href="https://wa.me/6281234567890?text=Halo%20FreshBite!%20Saya%20mau%20pesan%20menu%20segar%20hari%20ini." target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2.5 rounded-full bg-papaya-orange text-on-papaya-orange px-8 py-4 font-label text-label-lg transition-colors duration-state-change hover:bg-mango-yellow hover:text-on-mango-yellow">
+              <span class="material-symbols-outlined text-title-lg" aria-hidden="true">chat</span>
+              <span>Pesan via WhatsApp</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Bottom Footer Details -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter-lg items-start">
+          <div class="flex flex-col gap-2">
+            <span class="font-display text-headline-md text-on-primary">FreshBite<span class="text-mango-yellow">.</span></span>
+            <p class="font-body text-body-md text-primary-container">Fresh Every Day, Healthy Every Bite!</p>
+          </div>
+
+          <div class="flex flex-col gap-2">
+            <span class="font-label text-label-sm uppercase tracking-wider text-mango-yellow">Jam Operasional</span>
+            <p class="font-body text-body-md text-on-primary flex items-center gap-2">
+              <span class="material-symbols-outlined text-title-md text-mango-yellow" aria-hidden="true">schedule</span>
+              <span>Senin – Minggu, 07.00 – 19.00 WIB</span>
+            </p>
+          </div>
+
+          <div class="flex flex-col gap-2">
+            <span class="font-label text-label-sm uppercase tracking-wider text-mango-yellow">Ikuti Kami</span>
+            <div class="flex flex-wrap items-center gap-4">
+              <a href="#instagram" class="font-label text-label-lg text-on-primary hover:text-mango-yellow transition-colors duration-state-change">Instagram @freshbite.id</a>
+              <a href="#tiktok" class="font-label text-label-lg text-on-primary hover:text-mango-yellow transition-colors duration-state-change">TikTok @freshbite.healthy</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- Toast feedback for + Pesan -->
+  <div id="order-toast" role="status" aria-live="polite" class="hidden fixed bottom-6 right-6 z-50 rounded-full bg-primary text-on-primary border border-mango-yellow px-6 py-3 shadow-lg flex items-center gap-3">
+    <span class="material-symbols-outlined text-mango-yellow text-title-md" aria-hidden="true">check_circle</span>
+    <span id="order-toast-text" class="font-label text-label-lg">Menu ditambahkan ke pesanan!</span>
+  </div>
+
+  <script>
+    // Category Tabs Filtering
+    const tabs = document.querySelectorAll('.menu-tab');
+    const cards = document.querySelectorAll('.menu-card');
+
+    tabs.forEach((tab) => {
+      tab.addEventListener('click', () => {
+        const filter = tab.getAttribute('data-filter');
+
+        tabs.forEach((t) => {
+          const isActive = t === tab;
+          t.setAttribute('aria-selected', isActive ? 'true' : 'false');
+          t.setAttribute('tabindex', isActive ? '0' : '-1');
+          t.classList.toggle('bg-primary', isActive);
+          t.classList.toggle('text-on-primary', isActive);
+          t.classList.toggle('bg-transparent', !isActive);
+          t.classList.toggle('text-on-surface-muted', !isActive);
+        });
+
+        cards.forEach((card) => {
+          const cat = card.getAttribute('data-category');
+          if (filter === 'all' || cat === filter) {
+            card.classList.remove('hidden');
+          } else {
+            card.classList.add('hidden');
+          }
+        });
+      });
+    });
+
+    // Build Your Own Interactive Selector
+    const customState = {
+      size: 'Mini (Rp10.000)',
+      sauce: 'Creamy Yogurt',
+      topping: 'Granola'
+    };
+
+    const customBtns = document.querySelectorAll('.custom-opt');
+    const summaryEl = document.getElementById('custom-summary');
+
+    customBtns.forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const step = btn.getAttribute('data-step');
+        const val = btn.getAttribute('data-value');
+        customState[step] = val;
+
+        document.querySelectorAll(`.custom-opt[data-step="${step}"]`).forEach((b) => {
+          const active = b === btn;
+          b.classList.toggle('bg-primary', active);
+          b.classList.toggle('text-on-primary', active);
+          b.classList.toggle('border-primary', active);
+          b.classList.toggle('bg-surface-container-low', !active);
+          b.classList.toggle('text-on-surface', !active);
+          b.classList.toggle('border-outline-variant', !active);
+        });
+
+        summaryEl.textContent = `${customState.size} • ${customState.sauce} • ${customState.topping}`;
+      });
+    });
+
+    // Quick "+ Pesan" toast feedback
+    let toastTimer;
+    function addToOrder(itemName, price) {
+      const toast = document.getElementById('order-toast');
+      const text = document.getElementById('order-toast-text');
+      const formatted = 'Rp' + price.toLocaleString('id-ID');
+      text.textContent = `${itemName} (${formatted}) siap dipesan via WhatsApp`;
+      toast.classList.remove('hidden');
+      clearTimeout(toastTimer);
+      toastTimer = setTimeout(() => {
+        toast.classList.add('hidden');
+      }, 3000);
+    }
+  </script>
+
+
+</body></html>

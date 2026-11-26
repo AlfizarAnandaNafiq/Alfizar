@@ -1,0 +1,6 @@
+{
+  "name": "FreshBite Healthy Food",
+  "description": "Solusi ngemil sehat, praktis, dan ramah di kantong pelajar hingga pekerja sibuk. Salad buah segar, jus buah murni, dan yogurt buah dibuat fresh setiap pagi.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
